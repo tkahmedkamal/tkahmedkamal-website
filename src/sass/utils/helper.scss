@@ -1,0 +1,25 @@
+.text-center {
+	text-align: center;
+}
+
+.pa-t {
+	padding-top: $primary-space;
+}
+
+.mr-t {
+	margin-top: $primary-space;
+}
+
+.pa-b {
+	padding-bottom: $sub-space;
+}
+
+.mr-b {
+	margin-bottom: $sub-space;
+}
+
+.wrapped {
+	@include flex-box;
+	@include align-items(center);
+	@include justify-content(center);
+}

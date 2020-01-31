@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Cairo:400,600,700&display=swap");
+$cairo: "Cairo", sans-serif, "tahoma", "verdana";
+
+$primary-space: 35px;
+$sub-space: 30px;
+
+/* Small devices (landscape phones, 576px and up)
+================================================== */
+$small-min-devices: "min-width: 576px";
+
+/* Medium devices (tablets, 768px and up)
+================================================== */
+$medium-min-devices: "min-width: 768px";
+
+/* Large devices (desktops, 992px and up)
+================================================== */
+$larg-min-devices: "min-width: 992px";
+
+/* Extra large devices (large desktops, 1200px and up)
+================================================== */
+$xlarg-min-devices: "min-width: 1200px";
+
+/* Extra small devices (portrait phones, less than 576px)
+================================================== */
+$xsmal-max-devices: "max-width: 575.98px";
+
+/* Small devices (landscape phones, less than 768px)
+================================================== */
+$small-max-devices: "max-width: 767.98px";
+
+/* Medium devices (tablets, less than 992px)
+================================================== */
+$medium-max-devices: "max-width: 991.98px";
+
+/* Large devices (desktops, less than 1200px)
+================================================== */
+$large-max-devices: "max-width: 1199.98px";

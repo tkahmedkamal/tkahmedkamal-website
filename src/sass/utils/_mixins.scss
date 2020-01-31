@@ -1,0 +1,98 @@
+/**
+* Flexbox 
+==================================
+  * - flex-box
+  * - align-items
+  * - justify-content
+*/
+
+@mixin flex-box() {
+  display: flex;
+}
+
+@mixin align-items($value) {
+  align-items: $value;
+}
+
+@mixin justify-content($value) {
+  justify-content: $value;
+}
+
+/**
+* Positions 
+==================================
+  * - rotate
+  * - scale
+  * - translate
+*/
+
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin relative($args...) {
+  @include position(relative, $args...);
+}
+
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+@mixin fixed($args...) {
+  @include position(fixed, $args...);
+}
+
+/**
+* Fonts 
+==================================
+  * - size
+  * - weight
+  * - style
+*/
+@mixin fonts($size: null, $weight: null, $style: null) {
+  font: {
+    size: $size;
+    weight: $weight;
+    style: $style;
+  }
+}
+
+/**
+* Transform 
+==================================
+  * - rotate
+  * - scale
+  * - translate
+*/
+@mixin transform($transforms) {
+  transform: $transforms;
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+/* Transition 
+================================== */
+
+@mixin transition($args...) {
+  transition: $args;
+}

@@ -1,0 +1,59 @@
+/**
+ * Typography
+ * =================================
+ * - Paragraphs
+ * - Headings
+ * - Links
+ * - placeholder
+ * - Type sizes
+*/
+
+body {
+	font-family: $cairo;
+}
+
+/* Paragraphs
+================*/
+
+p {
+	margin: 0;
+	color: $gray-color;
+	@include fonts($size: 16px, $weight: 400);
+}
+
+/* Headings
+================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: $black-color;
+	text-transform: capitalize;
+	@include fonts($weight: 700);
+}
+
+h1 {
+	@include fonts($size: 80px);
+}
+
+h2 {
+	@include fonts($size: 20px);
+}
+
+/* Links
+================*/
+
+a {
+	text-decoration: none;
+}
+
+/* Placeholder
+================*/
+::placeholder {
+	color: $gray-color;
+	text-transform: capitalize;
+}

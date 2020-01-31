@@ -1,0 +1,29 @@
+/**
+ * Reset
+ * =================================
+ * - Button
+ * - Input
+ * - List
+*/
+
+/* Button, Input
+================*/
+
+button,
+input {
+	outline: none;
+	border: 0;
+}
+
+/* List
+================*/
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+i {
+	list-style-type: none;
+}
