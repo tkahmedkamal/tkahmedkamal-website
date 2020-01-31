@@ -24,7 +24,7 @@ $(function() {
 			.css("display", "flex");
 	});
 
-	$("#close-primary-menu").on("click", function() {
+	$("#close-menu").on("click", function() {
 		$("#navbar-area").removeClass("active");
 		$("#menu-area")
 			.delay(900)

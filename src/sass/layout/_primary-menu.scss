@@ -49,14 +49,21 @@
 		}
 	}
 
-	.close-primary-menu {
-		@include absolute($top: 50px, $right: 50px);
+	.close-menu {
+		@include absolute($top: 100px, $right: 50px);
+		padding: 8px 15px;
 		@include fonts($size: 25px);
 		color: $black-color;
+		opacity: 0;
 		cursor: pointer;
-		@include transition(transform 0.5s);
+		@include transition(top 0.5s, opacity 0.5s);
+		.close-icon {
+			@include transition(transform 0.5s);
+		}
 		&:hover {
-			@include rotate(180);
+			.close-icon {
+				@include rotate(180);
+			}
 		}
 	}
 }
@@ -81,6 +88,11 @@
 				}
 			}
 		}
+	}
+
+	.close-menu {
+		top: 50px;
+		opacity: 1;
 	}
 }
 /* Menu Area End */
