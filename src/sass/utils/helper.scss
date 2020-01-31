@@ -23,3 +23,9 @@
 	@include align-items(center);
 	@include justify-content(center);
 }
+
+.flex-space-between {
+	@include flex-box;
+	@include align-items(center);
+	@include justify-content(space-between);
+}

@@ -1,0 +1,33 @@
+/* Navbar Area Start
+========================================== */
+.navbar-area {
+	padding: 27px 0;
+
+	.menu-icon {
+		width: 30px;
+		cursor: pointer;
+		span {
+			height: 3px;
+			display: block;
+			background-color: $black-color;
+			@include transition(width 0.3s);
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+			&:first-child {
+				width: 10px;
+			}
+			&:nth-child(2) {
+				width: 20px;
+			}
+			&:last-child {
+				width: 25px;
+			}
+		}
+
+		&:hover span {
+			width: 100%;
+		}
+	}
+}
+/* Navbar Area End */

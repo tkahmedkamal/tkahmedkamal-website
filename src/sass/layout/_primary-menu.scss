@@ -1,0 +1,86 @@
+/* Menu Area Start
+========================================== */
+.menu-area {
+	@include fixed($top: 0, $right: 0, $left: 0);
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	display: none;
+
+	.primary-menu {
+		li {
+			@include relative($top: 100px);
+			&:not(:last-child) {
+				margin-bottom: 35px;
+			}
+			opacity: 0;
+			&:nth-child(4) {
+				@include transition(opacity 0.5s 0s, top 0.5s 0s);
+			}
+			&:nth-child(3) {
+				@include transition(opacity 0.5s 0.2s, top 0.5s 0.2s);
+			}
+			&:nth-child(2) {
+				@include transition(opacity 0.5s 0.4s, top 0.5s 0.4s);
+			}
+			&:nth-child(1) {
+				position: relative;
+				@include transition(opacity 0.5s 0.6s, top 0.5s 0.6s);
+			}
+			a {
+				@include relative();
+				@include fonts($size: 40px, $weight: 700);
+				color: $black-color;
+				&::before {
+					content: attr(data-currentText);
+					@include absolute($top: 15px, $right: 0);
+					width: 0;
+					color: $primary-color;
+					@include transition(width 0.5s);
+					overflow: hidden;
+				}
+				&:hover {
+					&::before {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.close-primary-menu {
+		@include absolute($top: 50px, $right: 50px);
+		@include fonts($size: 25px);
+		color: $black-color;
+		cursor: pointer;
+		@include transition(transform 0.5s);
+		&:hover {
+			@include rotate(180);
+		}
+	}
+}
+
+.active {
+	.menu-area {
+		.primary-menu {
+			li {
+				top: 0;
+				opacity: 1;
+				&:nth-child(1) {
+					@include transition(opacity 0.5s 0s, top 0.5s 0s);
+				}
+				&:nth-child(2) {
+					@include transition(opacity 0.5s 0.2s, top 0.5s 0.2s);
+				}
+				&:nth-child(3) {
+					@include transition(opacity 0.5s 0.4s, top 0.5s 0.4s);
+				}
+				&:nth-child(4) {
+					@include transition(opacity 0.5s 0.6s, top 0.5s 0.6s);
+				}
+			}
+		}
+	}
+}
+/* Menu Area End */
